@@ -1,7 +1,6 @@
 require("dotenv").config();
 
 const Discord = require("discord.js");
-const config = require("./botconfig.json");
 const buildPdf = require("./report/builder");
 const fs = require("fs");
 const client = new Discord.Client();
@@ -124,7 +123,7 @@ client.once("ready", () => {
 client.login(process.env.TOKEN);
 
 client.on("message", message => {
-  if (message.content.startsWith(config.prefix)) {
+  if (message.content.startsWith(process.env.PREFIX)) {
     let args = message.content.split("-");
     let command = args[0].substring(1);
     let params = args.slice(1);
