@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const Discord = require("discord.js");
 const config = require("./botconfig.json");
 const buildPdf = require("./report/builder");
@@ -119,7 +121,7 @@ client.once("ready", () => {
   console.log("Ready!");
 });
 
-client.login(config.token);
+client.login(process.env.TOKEN);
 
 client.on("message", message => {
   if (message.content.startsWith(config.prefix)) {
