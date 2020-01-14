@@ -1,0 +1,17 @@
+{
+  "name": "reunion-bot",
+  "version": "1.0.0",
+  "description": "Bot discord para reunião do cobralc",
+  "main": "index.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "author": "Bruno Monteiro",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.1",
+    "discord.js": "^11.5.1",
+    "pdfkit": "^0.11.0",
+    "selenium-webdriver": "^4.0.0-alpha.5"
+  }
+}
